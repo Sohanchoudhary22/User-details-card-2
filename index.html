@@ -4,15 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User-details-card-2</title>
+
+    <style>
+        *body{
+          /* text-align: center; */
+          margin: auto;
+        }
+        #main_container{
+          /* border: 1px solid rgb(34, 33, 33); */
+          width: 100%;
+          
+          background-color: rgb(236, 228, 228);
+          height: auto;
+          padding: 7px;
+          gap: 25px;
+          text-align: center;
+          display: grid;
+          grid-template-columns:repeat(5,2fr)
+        }
+        #main_container div{
+          /* border: 1px solid black; */
+          background-color: bisque;
+          width: 90%;
+          padding: 10px;
+          border-radius: 10px 40px;
+        }
+         img{
+          /* border: 2px solid rgb(214, 13, 13); */
+          height:300px;
+          width: 100%;
+          border-radius: 10px 40px;
+        }
+        h1{
+          text-align: center;
+        }
+        button{
+          border: none;
+          background-color: rgb(238, 146, 9);
+          border-radius: 20px;
+          width: 50%;
+          height: 40px;
+        }
+        button:hover{
+          cursor: pointer;
+          background-color: rgb(245, 11, 214);
+        }
+        @media screen and (min-width:200px) and (max-width:767px) {
+          #main_container {
+            border: 1px solid rgb(231, 14, 14);
+            width: 95%;
+          
+            
+            /* padding-left: 10%; */
+           
+            /* padding: 20px; */
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+          }
+          #main_container div {
+          text-align: center;
+          margin-left: 5%;
+          width: 80%;
+          align-items: center;
+          }
+        }
+        @media screen and (min-width:768px) and (max-width:1024px) {
+          #main_container{
+            border: 2px solid red;
+            align-items: center;
+            width: 95%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+          }
+        }
+      </style>
 </head>
 <body>
-    <div class="main_container">
-
-    </div>
+<h1>Indian T-20 WorldCup Cricket Team </h1>
+  <div id="main_container">
+   
+ 
+</div>
 </body>
 <script>
-    let data = [
-        
-    ]
+  let data= [
+   
+{
+  "cricketer_name": "Virat Kohli",
+  "class": "Batsman",
+  "mobile_number": "+91-9876543210",
+  "img": "https://media.istockphoto.com/id/1291961188/photo/stunning-view-of-the-hawa-mahal-at-sunset-with-blurred-people-walking-during-the-covid-19.jpg?s=2048x2048&w=is&k=20&c=1GYAzWA5zNk-bzs4NLLlHppgzXBT_KsNpPIE-TJIQos="
+},
+{
+  "cricketer_name": "Rohit Sharma",
+  "class": "Batsman",
+  "mobile_number": "+91-8765432109",
+  "img": "https://www.istockphoto.com/photo/jal-mahal-a-famous-water-palace-of-jaipur-india-gm1329163274-412991365?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fjaipur%2F&utm_term=jaipur"
+},
+{
+  "cricketer_name": "Jasprit Bumrah",
+  "class": "Bowler",
+  "mobile_number": "+91-7654321098",
+  "img": "https://c8.alamy.com/comp/JCETJR/indias-jasprit-bumrah-during-the-icc-champions-trophy-semi-final-match-JCETJR.jpg"
+},
+{
+  "cricketer_name": "Sir Jadeja",
+  "class": "All-rounder",
+  "mobile_number": "+91-6543210987",
+  "img": "https://www.hdwallpapers.in/download/ravindra_jadeja_chennai_super_kings_2020_cricket_hd_sports-1920x1080.jpg"
+},
+{
+  "cricketer_name": "KL Rahul",
+  "class": "Batsman",
+  "mobile_number": "+91-5432109876",
+  "img": "https://static.indiatvnews.com/ins-web/images/rahul-1538564290.jpg"
+},
+{
+  "cricketer_name": "H Pandya",
+  "class": "All-rounder",
+  "mobile_number": "+91-4321098765",
+  "img": "https://assets.gqindia.com/photos/6564388a87263077657e31e1/1:1/w_1080,h_1080,c_limit/Hardik-Pandya-transferred-to-Mumbai-Indians-for-IPL-2024.jpg"
+},
+{
+  "cricketer_name": "S Dhawan",
+  "class": "Batsman",
+  "mobile_number": "+91-3210987654",
+  "img": "https://wallpapers.com/images/hd/shikhar-dhawan-smile-yrtecszy3ewih15v.jpg"
+},
+{
+  "cricketer_name": "B Kumar",
+  "class": "Bowler",
+  "mobile_number": "+91-2109876543",
+  "img": "https://img.theweek.in/content/dam/week/news/sports/images/2018/2/25/bhuvi-ind-sa-tour-afp.jpg"
+},
+{
+  "cricketer_name": "R Pant",
+  "class": "keeper-Batsman",
+  "mobile_number": "+91-1098765432",
+  "img": "https://images.cnbctv18.com/wp-content/uploads/2022/09/Rishabh-Pant-in-team-Indias-latest-jersey.jpg"
+},
+{
+  "cricketer_name": "A Rahane",
+  "class": "Batsman",
+  "mobile_number": "+91-0987654321",
+  "img": "https://www.adgully.com/img/800/201711/ajinkiya.jpg"
+}
+]
+
+ 
+
+let main_container = document.getElementById("main_container")
+function getdata() {
+ data.map (function(user) {
+  let div=document.createElement("div")
+  let h1=document.createElement("h1")
+  h1.innerText=user.cricketer_name
+  let h2=document.createElement("h2")
+  h2.innerText= user.class
+  let image=document.createElement("img")
+  image.src=user.img
+  let h3=document.createElement("h3")
+  h3.innerText = user.mobile_number
+  let btn=document.createElement("button")
+  btn.innerText="About More"
+  div.append(image, h1 ,h2,h3,btn)
+  main_container.append(div)
+  console.log(user)
+ });
+}
+getdata()
+
 </script>
+
 </html>
