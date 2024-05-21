@@ -6,174 +6,158 @@
     <title>User-details-card-2</title>
 
     <style>
-        *body{
-          /* text-align: center; */
-          margin: auto;
-        }
-        #main_container{
-          /* border: 1px solid rgb(34, 33, 33); */
-          width: 100%;
-          
-          background-color: rgb(236, 228, 228);
-          height: auto;
-          padding: 7px;
-          gap: 25px;
-          text-align: center;
-          display: grid;
-          grid-template-columns:repeat(5,2fr)
-        }
-        #main_container div{
-          /* border: 1px solid black; */
-          background-color: bisque;
-          width: 90%;
-          padding: 10px;
-          border-radius: 10px 40px;
-        }
-         img{
-          /* border: 2px solid rgb(214, 13, 13); */
-          height:300px;
-          width: 100%;
-          border-radius: 10px 40px;
-        }
-        h1{
-          text-align: center;
-        }
-        button{
-          border: none;
-          background-color: rgb(238, 146, 9);
-          border-radius: 20px;
-          width: 50%;
-          height: 40px;
-        }
-        button:hover{
-          cursor: pointer;
-          background-color: rgb(245, 11, 214);
-        }
-        @media screen and (min-width:200px) and (max-width:767px) {
-          #main_container {
-            border: 1px solid rgb(231, 14, 14);
-            width: 95%;
-          
-            
-            /* padding-left: 10%; */
-           
-            /* padding: 20px; */
-            display: grid;
-            grid-template-columns: repeat(1,1fr);
-          }
-          #main_container div {
-          text-align: center;
-          margin-left: 5%;
-          width: 80%;
-          align-items: center;
-          }
-        }
-        @media screen and (min-width:768px) and (max-width:1024px) {
-          #main_container{
-            border: 2px solid red;
-            align-items: center;
-            width: 95%;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-          }
-        }
-      </style>
+      #main_container{
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+  text-align: center;
+  margin: auto;
+  
+}
+.card{
+  /* border: 1px solid gray; */
+  border-radius: 10px 40px;
+  overflow: hidden;
+  transition: ease-in-out 1s;
+  width: 94%;
+  padding: 15px;
+  margin: auto;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+ 
+}
+.card:hover{
+  transform: scale(1.01);
+  box-shadow: rgb(6, 10, 12) 0px 2px 4px 0px, rgb(8, 11, 12) 0px 2px 16px 0px;
+}
+.card img{
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  transition: ease-in-out 1s;
+ 
+}
+.card img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.card img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+ 
+}
+.card h1{
+  color: rgb(237, 138, 138);
+  text-align: center;
+  line-height: 0.9;
+}
+.card h2{
+  color: rgb(45, 59, 49);
+  font-style: italic;
+  font-weight: bold;
+
+}
+.card button{
+  width: 25%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(214, 98, 214);
+  color: white;
+}
+@media screen and (min-width:720px) and (max-width:1080px) {
+  #main_container{ 
+      width: 99%;      
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+      text-align: center;
+      padding: 0px;
+  }
+  
+  
+}
+@media screen and (min-width:100px) and (max-width:719px) {
+  #main_container{   
+      width: 98%;
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 20px;
+      margin: auto;
+      
+  }
+  .card{
+      
+      
+      padding: 10px;
+      
+  }
+
+
+}
+  </style>
 </head>
 <body>
-<h1>Indian T-20 WorldCup Cricket Team </h1>
-  <div id="main_container">
-   
- 
+<div id="main_container">
+
 </div>
 </body>
 <script>
-  let data= [
-   
-{
-  "cricketer_name": "Virat Kohli",
-  "class": "Batsman",
-  "mobile_number": "+91-9876543210",
-  "img": "https://media.istockphoto.com/id/1291961188/photo/stunning-view-of-the-hawa-mahal-at-sunset-with-blurred-people-walking-during-the-covid-19.jpg?s=2048x2048&w=is&k=20&c=1GYAzWA5zNk-bzs4NLLlHppgzXBT_KsNpPIE-TJIQos="
-},
-{
-  "cricketer_name": "Rohit Sharma",
-  "class": "Batsman",
-  "mobile_number": "+91-8765432109",
-  "img": "https://www.istockphoto.com/photo/jal-mahal-a-famous-water-palace-of-jaipur-india-gm1329163274-412991365?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fjaipur%2F&utm_term=jaipur"
-},
-{
-  "cricketer_name": "Jasprit Bumrah",
-  "class": "Bowler",
-  "mobile_number": "+91-7654321098",
-  "img": "https://c8.alamy.com/comp/JCETJR/indias-jasprit-bumrah-during-the-icc-champions-trophy-semi-final-match-JCETJR.jpg"
-},
-{
-  "cricketer_name": "Sir Jadeja",
-  "class": "All-rounder",
-  "mobile_number": "+91-6543210987",
-  "img": "https://www.hdwallpapers.in/download/ravindra_jadeja_chennai_super_kings_2020_cricket_hd_sports-1920x1080.jpg"
-},
-{
-  "cricketer_name": "KL Rahul",
-  "class": "Batsman",
-  "mobile_number": "+91-5432109876",
-  "img": "https://static.indiatvnews.com/ins-web/images/rahul-1538564290.jpg"
-},
-{
-  "cricketer_name": "H Pandya",
-  "class": "All-rounder",
-  "mobile_number": "+91-4321098765",
-  "img": "https://assets.gqindia.com/photos/6564388a87263077657e31e1/1:1/w_1080,h_1080,c_limit/Hardik-Pandya-transferred-to-Mumbai-Indians-for-IPL-2024.jpg"
-},
-{
-  "cricketer_name": "S Dhawan",
-  "class": "Batsman",
-  "mobile_number": "+91-3210987654",
-  "img": "https://wallpapers.com/images/hd/shikhar-dhawan-smile-yrtecszy3ewih15v.jpg"
-},
-{
-  "cricketer_name": "B Kumar",
-  "class": "Bowler",
-  "mobile_number": "+91-2109876543",
-  "img": "https://img.theweek.in/content/dam/week/news/sports/images/2018/2/25/bhuvi-ind-sa-tour-afp.jpg"
-},
-{
-  "cricketer_name": "R Pant",
-  "class": "keeper-Batsman",
-  "mobile_number": "+91-1098765432",
-  "img": "https://images.cnbctv18.com/wp-content/uploads/2022/09/Rishabh-Pant-in-team-Indias-latest-jersey.jpg"
-},
-{
-  "cricketer_name": "A Rahane",
-  "class": "Batsman",
-  "mobile_number": "+91-0987654321",
-  "img": "https://www.adgully.com/img/800/201711/ajinkiya.jpg"
-}
-]
+  let data =[
+        {"image":"Hawa-Mahal.jpg",
+          "title":"Hawa-Mahal",
+          "p":"Also known as the palace of winds. Hawa Mahal is an iconic landmark of jaipur."  
+        },
+        {"image":"City-Palace.jpg",
+          "title":"City-Palace",
+          "p":"Step into the opulent world of the city, a grand complex showcasing the rich heritage of jaipur's royalty."   
+        },
+        {"image":"Amber-Fort.jpg",
+          "title":"Amber-Fort",
+          "p":"Situated atop a hill, Amber Fort is a majestic architectural marvel that transports you back in time."   
+        },
+        {"image":"jantar mantar.jpg",
+          "title":"Jantar-Mantar",
+          "p":"For astronomy enthusiasts, jantar mantar is a must-vist. This UNESCO world heritage site houses a collection."   
+        },
+        {"image":"Nahargarh-Fort.jpg",
+          "title":"Nahargarh-Fort",
+          "p":"Another fort offering vreathtaking veiws, Nahargarh fort sits on the edge of the aravalli hills."   
+        },
+        {"image":"Sheesh-Mahal.jpg",
+          "title":"Sheesh-Mahal",
+          "p":"Located within the amber palace, sheesh mahal will leave you awestruck with its breathtaking mirror work."   
+        },
+        {"image":"Jal-Mahal.jpg",
+          "title":"Jal-Mahal",
+          "p":"Located in the middle of Man Sagar Lake, jal mahal is a picturesque palace to float on the weater's surface."   
+        },
+        {"image":"Bhangarh-Fort.jpg",
+          "title":"Bhangarh-Fort",
+          "p":"Delve into the realm of mystery and intrigue at Bhangarh fort, Known for its haunting tales."   
+        },
+    ]
+     let main_container = document.getElementById("main_container")
 
- 
+   function getData(){
+        data.map((user)=>{
+    let card = document.createElement("card_div")
+    card.classList.add("card")
+    let image = document.createElement("img")
+    image.src = user.image
+    let title = document.createElement("h1")
+    title.innerText = user.title
+    let h2 = document.createElement("h2")
+    h2.innerText = user.p
+    let btn = document.createElement("button")
+    btn.innerText = "Know more"
+    card.append(image,title,h2,btn);
+    main_container.append(card)
+    // console.log(user)
+});
 
-let main_container = document.getElementById("main_container")
-function getdata() {
- data.map (function(user) {
-  let div=document.createElement("div")
-  let h1=document.createElement("h1")
-  h1.innerText=user.cricketer_name
-  let h2=document.createElement("h2")
-  h2.innerText= user.class
-  let image=document.createElement("img")
-  image.src=user.img
-  let h3=document.createElement("h3")
-  h3.innerText = user.mobile_number
-  let btn=document.createElement("button")
-  btn.innerText="About More"
-  div.append(image, h1 ,h2,h3,btn)
-  main_container.append(div)
-  console.log(user)
- });
 }
-getdata()
+getData()
 
 </script>
 
